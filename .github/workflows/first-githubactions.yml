@@ -1,0 +1,14 @@
+name: Run Shell Commands
+on: [push]
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run shell commands Echo a string
+        run: |
+          echo "Hello, World!"
+          echo "This is a test of GitHub Actions."
+          echo "Current date and time: $(date)"
+          echo "Running on $(uname -s) $(uname -r)"
+          echo "Listing files in the current directory:"
+          ls -la
